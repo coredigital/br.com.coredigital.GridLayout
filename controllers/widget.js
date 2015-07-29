@@ -1,9 +1,13 @@
 (function constructor(args) {
-	var totalItens = 0;
-	var widthView = Ti.Platform.displayCaps.platformWidth / 3 ;
-	var heightView = Ti.Platform.displayCaps.platformWidth / 3 ;
-	var horizontalView ;
+	$.gridLayout.applyProperties(_.pick(args, ["visible", "height", "top", "bottom", "left", "right", "width", "backgroundColor"]));
 
+	var totalColumns = args.columns || 3;
+	var gap = args.gap || 3;
+	var totalItens = 0;
+	var widthView = (Ti.Platform.displayCaps.platformWidth - gap * (totalColumns + 1)) / totalColumns ;
+	var heightView = (Ti.Platform.displayCaps.platformWidth - gap * (totalColumns + 1)) / totalColumns ;
+	var horizontalView ;
+	$.footer.height = gap;
 	_.each(args.children, function(view, index) {
 		addItem(view);
 	});
@@ -11,19 +15,21 @@
 	function addItem(view) {
 		view.height = heightView;
 		view.width = widthView;
-		if (totalItens % 3 == 0) {
+		view.left = gap;
+		view.top = gap;
+		if (totalItens % totalColumns == 0) {
 			horizontalView = Ti.UI.createView({
 				layout: 'horizontal',
 				height: heightView
 			});
-			$.gridLayout.add(horizontalView);
+			$.wrapperGridLayout.add(horizontalView);
 		} 
 		horizontalView.add(view);
 		totalItens ++ ;
 	}
 
 	function removeAllItems() {
-		$.gridLayout.removeAllChildren();
+		$.wrapperGridLayout.removeAllChildren();
 		totalItens = 0;
 	}
 

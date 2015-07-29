@@ -1,4 +1,6 @@
 <Alloy>
 	<ScrollView id="gridLayout" layout="vertical">
+		<View id="wrapperGridLayout" layout="vertical"></View>
+		<View id="footer"></View>
 	</ScrollView>
 </Alloy>
