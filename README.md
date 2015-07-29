@@ -1,2 +1,2 @@
-# br.com.coredigital.GirdLayout
+# br.com.coredigital.GridLayout
 GirdLayout widget for Appcelerator Titanium
