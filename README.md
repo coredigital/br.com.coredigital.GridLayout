@@ -1,5 +1,5 @@
 # br.com.coredigital.GridLayout
-GirdLayout widget for Appcelerator Titanium
+GridLayout widget for Appcelerator Titanium
 
 
 ## Overview
@@ -12,19 +12,15 @@ GirdLayout widget for Appcelerator Titanium
 
 ## Use it
 
-* Add the widget to your *TableView*:
+* Add the widget to your *Code*:
 
 	```xml
-	<TableView id="table">
-	  <Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
-	</TableView>
-	```
-	
-	or *ListView*:
-	
-	```xml
-	<ListView id="list">
-	  <Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
-	</ListView>
+	<Widget id="gridDeals" src="br.com.coredigital.GridLayout">
+	    <View backgroundColor="blue"></View>
+	    <View backgroundColor="yellow"></View>
+	    <View backgroundColor="green"></View>
+	    <View backgroundColor="black"></View>
+	    <View backgroundColor="orange"></View>
+	</Widget>
 	```
 

@@ -1,7 +1,7 @@
 (function constructor(args) {
 	$.gridLayout.applyProperties(_.pick(args, ["visible", "height", "top", "bottom", "left", "right", "width", "backgroundColor"]));
 
-	var totalColumns = args.columns || 3;
+	var totalColumns = args.totalColumns || 2;
 	var gap = args.gap || 3;
 	var totalItens = 0;
 	var widthView = (Ti.Platform.displayCaps.platformWidth - gap * (totalColumns + 1)) / totalColumns ;
