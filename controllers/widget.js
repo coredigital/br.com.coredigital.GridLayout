@@ -4,11 +4,14 @@
 	var totalColumns = parseInt(args.columns) || 2;
 	var gap = parseInt(args.gap) || 3;
 	var totalItens = 0;
-	var widthView = px2dpi((Ti.Platform.displayCaps.platformWidth - gap * (totalColumns + 1)) / totalColumns) ;
-	var heightView = px2dpi((Ti.Platform.displayCaps.platformWidth - gap * (totalColumns + 1)) / totalColumns);
+
+	var widthScreen = OS_ANDROID ? px2dpi(Ti.Platform.displayCaps.platformWidth) : Ti.Platform.displayCaps.platformWidth;
+
+	var widthView = (widthScreen - gap * (totalColumns + 1)) / totalColumns;
+	var heightView = (widthScreen - gap * (totalColumns + 1)) / totalColumns;
 	var horizontalView ;
 
-	$.footer.height = px2dpi(gap);
+	$.footer.height = gap;
 	_.each(args.children, function(view, index) {
 		addItem(view);
 	});
@@ -16,8 +19,8 @@
 	function addItem(view) {
 		view.height = heightView;
 		view.width = widthView;
-		view.left = px2dpi(gap);
-		view.top = px2dpi(gap);
+		view.left = gap;
+		view.top = gap;
 		if (totalItens % totalColumns == 0) {
 			horizontalView = Ti.UI.createView({
 				layout: 'horizontal',
