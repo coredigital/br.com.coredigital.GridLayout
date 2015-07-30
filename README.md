@@ -26,7 +26,7 @@ GridLayout widget for Appcelerator Titanium
 ## License
 
 <pre>
-Copyright 2014-2015 Ítalo Matos
+Copyright 2015 Ítalo Matos
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
