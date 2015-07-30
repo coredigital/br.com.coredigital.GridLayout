@@ -1,6 +1,6 @@
 <Alloy>
 	<ScrollView id="gridLayout" layout="vertical">
-		<View id="wrapperGridLayout" layout="vertical"></View>
+		<View id="wrapperGridLayout" height="Ti.UI.SIZE" layout="vertical"></View>
 		<View id="footer"></View>
 	</ScrollView>
 </Alloy>
