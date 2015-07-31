@@ -26,6 +26,19 @@ This widget helps you to organize your views in grid format.
 	    <View backgroundColor="orange"></View>
 	</Widget>
 	```
+You can set 'columns' attribute to determine how many grid's columns.
+You can set 'gap' attribute to define the distance between views
+
+	```xml
+	<Widget id="gridDeals" src="br.com.coredigital.GridLayout" columns="3" gap="5">
+	    <View backgroundColor="blue"></View>
+	    <View backgroundColor="yellow"></View>
+	    <View backgroundColor="green"></View>
+	    <View backgroundColor="black"></View>
+	    <View backgroundColor="orange"></View>
+	</Widget>
+	```
+
 
 * Add the widget to your *Controller Code*:
 	```javascript
