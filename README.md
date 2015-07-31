@@ -12,7 +12,7 @@ GridLayout widget for Appcelerator Titanium
 
 ## Use it
 
-* Add the widget to your *Code*:
+* Add the widget to your *Alloy Code*:
 
 	```xml
 	<Widget id="gridDeals" src="br.com.coredigital.GridLayout">
@@ -22,6 +22,18 @@ GridLayout widget for Appcelerator Titanium
 	    <View backgroundColor="black"></View>
 	    <View backgroundColor="orange"></View>
 	</Widget>
+	```
+
+* Add the widget to your *Controller Code*:
+	```javascript
+
+	var gridDeals = Alloy.createController('br.com.coredigital.GridLayout');
+	gridDeals.addItem(Ti.UI.createView({backgroundColor: 'blue'}));
+	gridDeals.addItem(Ti.UI.createView({backgroundColor: 'yellow'}));
+	gridDeals.addItem(Ti.UI.createView({backgroundColor: 'green'}));
+	gridDeals.addItem(Ti.UI.createView({backgroundColor: 'black'}));
+	gridDeals.addItem(Ti.UI.createView({backgroundColor: 'orange'}));
+	
 	```
 ## License
 
