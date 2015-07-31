@@ -7,12 +7,6 @@ This widget helps you to organize your views in grid format.
 
 ![screenshot](https://raw.github.com/coredigital/br.com.coredigital.GridLayout/master/docs/screenshot.png)
 
-## Features
-
-## Quick Start
-
-## Git it
-
 ## Use it
 
 * Add the widget to your *Alloy Code*:
