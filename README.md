@@ -3,6 +3,9 @@ GridLayout widget for Appcelerator Titanium
 
 
 ## Overview
+This widget helps you to organize your views in grid format.
+
+![screenshot](https://raw.github.com/coredigital/br.com.coredigital.GridLayout/master/docs/screenshot.png)
 
 ## Features
 
